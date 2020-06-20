@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Coronavírus - Brasil</title>
+</head>
+<body>
+    <div class="content-area">
+        <canvas class="line-chart"></canvas>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+        <script>
+            var ctx = document.getElementsByClassName("line-chart")
+
+            var chartGraph = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["26/02", "28/02", "01/03", "03/03", "05/03", "07/03", "09/03", "11/03", "13/03", "15/03", "17/03", "19/03", "21/03", "23/03", "25/03", "27/03", "29/03", "31/03", "02/04", "04/04", "06/04", "08/04", "10/04", "12/04", "14/04", "16/04", "18/04", "20/04", "22/04", "24/04", "26/04", "28/04", "30/04", "02/05", "04/05", "06/05", "08/05", "10/05", "12/05", "14/05", "16/05", "18/05", "20/05", "22/05", "24/05", "26/05", "28/05", "30/05", "01/06", "03/06", "05/06", "07/06", "09/06", "11/06", "13/06", "15/06", "17/06", "19/06"], //59
+                    datasets: [{
+                        label: "Casos",
+                        data: [1, 1, 2, 2, 7, 19, 25, 52, 98, 200, 291, 621, 1128, 1891, 2433, 3417, 4269, 5744, 7911, 10298, 12066, 16037, 19730, 22206, 25371, 30449, 36739, 40616, 45976, 53448, 62208, 72149, 85507, 96559, 107780, 125218, 145328, 162699, 177589, 202918, 233142, 254220, 291579, 330890, 363211, 391222, 438238, 498440, 526447, 584016, 645771, 691758, 739503, 802828, 850514, 888271, 955377, 1032913],
+                        borderWidth: 3,
+                        borderColor: '#44c980',
+                        backgroundColor: 'rgba(68, 194, 201, 0.45)'
+                    }, {
+                        label: "Mortes",
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 18, 34, 57, 92, 136, 201, 299, 432, 555, 814, 1065, 1225, 1541, 1933, 2359, 2584, 2917, 3688, 4244, 5050, 5912, 6750, 7321, 8536, 9897, 11123, 12400, 13993, 15633, 16792, 18859, 21048, 22666, 24512, 26754, 28834, 29937, 32548, 35026, 36455, 38406, 40919, 42720, 43959, 46510, 48954],
+                        borderWidth: 3,
+                        borderColor: '#e84646',
+                        backgroundColor: 'rgba(191, 67, 67, 0.45)'
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        fontSize: 20,
+                        text: "GRÁFICO COVID-19 -- BRASIL"
+                    },
+                },
+            });
+        </script>
+    </div>
+    <footer>
+        <div class="copyright">&copy; Bie Animation</div>
+        <div class="data-site">Data: <span>https://covid.saude.gov.br</span></div>
+    </footer>
+</body>
+</html>
